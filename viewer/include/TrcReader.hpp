@@ -8,6 +8,7 @@ namespace viewer{
         TrcReader(const std::string& filepath);
         virtual int open(const std::string& filepath);
         virtual void readNext(Pose& pose);
+        virtual bool isOpened()const;
         MotionReader& operator >> (Pose& pose){
             this->readNext(pose);
             return *this;

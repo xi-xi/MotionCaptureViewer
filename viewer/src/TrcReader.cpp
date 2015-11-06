@@ -11,7 +11,7 @@ namespace viewer{
     }
     
     int TrcReader::open(const std::string &filepath){
-        boost::filesystem::path p;
+        boost::filesystem::path p(filepath);
         return 0;
     }
     

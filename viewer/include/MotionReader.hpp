@@ -10,6 +10,7 @@ namespace viewer{
         MotionReader();
         MotionReader(const std::string& filepath);
         virtual int open(const std::string& filepath) = 0;
+        virtual bool isOpened()const = 0;
         virtual void readNext(Pose& pose) = 0;
         MotionReader& operator >> (Pose& pose){
             this->readNext(pose);
