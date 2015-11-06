@@ -1,0 +1,8 @@
+add_executable(viewer main.cpp)
+IF(APPLE)
+    target_link_libraries(viewer "-framework OpenGL")
+    target_link_libraries(viewer "-framework Cocoa")
+    target_link_libraries(viewer "-framework IOKit")
+    target_link_libraries(viewer "-framework CoreVideo")
+ENDIF(APPLE)
+target_link_libraries(viewer glfw ${GLFW_LIBRARIES})
