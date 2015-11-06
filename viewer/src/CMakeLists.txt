@@ -1,4 +1,4 @@
-add_executable(viewer main.cpp)
+add_executable(viewer ${VIEWER_SRC_FILE} ${VIEWER_INCLUDE_FILE})
 IF(APPLE)
     target_link_libraries(viewer "-framework OpenGL")
     target_link_libraries(viewer "-framework Cocoa")
