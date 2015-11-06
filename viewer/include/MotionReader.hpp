@@ -1,8 +1,6 @@
 #ifndef __VIEWER_MOTIONREADER_HPP__
 #define __VIEWER_MOTIONREADER_HPP__
-namespace std{
-    class string;
-}
+#include <string>
 namespace viewer{
     class Pose;
 }
