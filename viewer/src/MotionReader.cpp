@@ -5,6 +5,5 @@ namespace viewer{
     }
     
     MotionReader::MotionReader(const std::string& filepath){
-        
     }
 }

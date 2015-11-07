@@ -19,7 +19,7 @@ namespace viewer{
         virtual void close() = 0;
 
     protected:
-    
+
     private:
     };
 }
