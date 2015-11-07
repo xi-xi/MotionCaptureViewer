@@ -5,6 +5,7 @@
 #include <fstream>
 #include <list>
 #include <string>
+#include "Pose.hpp"
 namespace viewer{
     class TrcReader : public MotionReader{
     public:
@@ -69,6 +70,7 @@ namespace viewer{
             L_Foot
         };
         static const std::string DATACELL_DELIM;
+        static Pose::JointName index2name(const TRC_JOINT_INDEX& index);
         std::ifstream input_stream_;
         void createPose(const std::list<std::string>& posedata, Motion& pose);
     };

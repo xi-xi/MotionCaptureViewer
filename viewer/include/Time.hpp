@@ -7,7 +7,7 @@ namespace viewer{
         Time();
         Time(std::size_t frame, double millisecond);
         std::size_t frame;
-        double millisecond;
+        double second;
     };
 }
 #endif

@@ -3,7 +3,7 @@
 namespace viewer{
     class Pose{
     public:
-        enum class JOINT_NAME{
+        enum class JointName{
             TopHead,
             BackHead,
             FrontHead,
