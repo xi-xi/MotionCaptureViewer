@@ -1,12 +1,28 @@
 #ifndef __VIEWER_TRCREADER_HPP__
 #define __VIEWER_TRCREADER_HPP__
 #include "MotionReader.hpp"
+#include <cstddef>
 #include <fstream>
 #include <list>
 #include <string>
 namespace viewer{
     class TrcReader : public MotionReader{
     public:
+        TrcReader();
+        TrcReader(const std::string& filepath);
+        ~TrcReader();
+        virtual int open(const std::string& filepath);
+        virtual void readNext(Motion& motion);
+        virtual bool isOpened()const;
+        MotionReader& operator >> (Motion& motion){
+            this->readNext(motion);
+            return *this;
+        }
+        virtual void close();
+
+    protected:
+
+    private:
         enum TRC_JOINT_INDEX{
             Frame,
             Time,
@@ -52,22 +68,6 @@ namespace viewer{
             L_Heel,
             L_Foot
         };
-
-        TrcReader();
-        TrcReader(const std::string& filepath);
-        ~TrcReader();
-        virtual int open(const std::string& filepath);
-        virtual void readNext(Motion& motion);
-        virtual bool isOpened()const;
-        MotionReader& operator >> (Motion& motion){
-            this->readNext(motion);
-            return *this;
-        }
-        virtual void close();
-
-    protected:
-
-    private:
         static const std::string DATACELL_DELIM;
         std::ifstream input_stream_;
         void createPose(const std::list<std::string>& posedata, Motion& pose);
