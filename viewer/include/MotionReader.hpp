@@ -2,7 +2,7 @@
 #define __VIEWER_MOTIONREADER_HPP__
 #include <string>
 namespace viewer{
-    class Pose;
+    class Motion;
 }
 namespace viewer{
     class MotionReader{
@@ -11,9 +11,9 @@ namespace viewer{
         MotionReader(const std::string& filepath);
         virtual int open(const std::string& filepath) = 0;
         virtual bool isOpened()const = 0;
-        virtual void readNext(Pose& pose) = 0;
-        MotionReader& operator >> (Pose& pose){
-            this->readNext(pose);
+        virtual void readNext(Motion& motion) = 0;
+        MotionReader& operator >> (Motion& motion){
+            this->readNext(motion);
             return *this;
         }
         virtual void close() = 0;

@@ -35,7 +35,7 @@ namespace viewer{
         return this->input_stream_.is_open();
     }
     
-    void TrcReader::readNext(Pose& pose){
+    void TrcReader::readNext(Motion& motion){
         if(!this->isOpened()){
             return;
         }
@@ -45,7 +45,7 @@ namespace viewer{
         }
         std::list<std::string> tokens;
         boost::split(tokens,line, boost::is_any_of(TrcReader::DATACELL_DELIM));
-        this->createPose(tokens, pose);
+        this->createPose(tokens, motion);
     }
     
     void TrcReader::close(){
@@ -54,6 +54,6 @@ namespace viewer{
         }
     }
     
-    void TrcReader::createPose(const std::list<std::string> &posedata, Pose& pose){
+    void TrcReader::createPose(const std::list<std::string> &posedata, Motion& motion){
     }
 }

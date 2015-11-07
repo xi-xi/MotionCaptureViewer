@@ -1,15 +1,9 @@
-#ifndef __VIEWER_TRCREADER_HPP__
-#define __VIEWER_TRCREADER_HPP__
-#include "MotionReader.hpp"
-#include <fstream>
-#include <list>
-#include <string>
+#ifndef __VIEWER_POSE_HPP__
+#define __VIEWER_POSE_HPP__
 namespace viewer{
-    class TrcReader : public MotionReader{
+    class Pose{
     public:
-        enum TRC_JOINT_INDEX{
-            Frame,
-            Time,
+        enum class JOINT_NAME{
             Top_head,
             Back_Head,
             Front_Head,
@@ -52,25 +46,13 @@ namespace viewer{
             L_Heel,
             L_Foot
         };
-
-        TrcReader();
-        TrcReader(const std::string& filepath);
-        ~TrcReader();
-        virtual int open(const std::string& filepath);
-        virtual void readNext(Motion& motion);
-        virtual bool isOpened()const;
-        MotionReader& operator >> (Motion& motion){
-            this->readNext(motion);
-            return *this;
-        }
-        virtual void close();
-
+        
+        Pose();
+    
     protected:
-
+    
     private:
-        static const std::string DATACELL_DELIM;
-        std::ifstream input_stream_;
-        void createPose(const std::list<std::string>& posedata, Motion& pose);
+    
     };
 }
 #endif
