@@ -5,7 +5,7 @@ namespace viewer{
     class Time{
     public:
         Time();
-        Time(std::size_t frame, double millisecond);
+        Time(std::size_t frame, double second);
         std::size_t frame;
         double second;
     };

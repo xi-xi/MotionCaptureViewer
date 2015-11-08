@@ -6,8 +6,8 @@ namespace viewer{
         
     }
     
-    Time::Time(std::size_t frame, double millisecond)
-        :frame(frame), second(millisecond){
+    Time::Time(std::size_t frame, double second)
+        :frame(frame), second(second){
         ;
     }
 }

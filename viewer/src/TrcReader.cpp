@@ -69,87 +69,87 @@ namespace viewer{
     
     Pose::JointName TrcReader::index2name(const TRC_JOINT_INDEX& index){
         switch(index){
-            case Back_Head:
+            case TRC_JOINT_INDEX_BACK_HEAD:
                 return Pose::JointName::BackHead;
-            case Front_Head:
+            case TRC_JOINT_INDEX_FRONT_HEAD:
                 return Pose::JointName::FrontHead;
-            case L_Ankle:
+            case TRC_JOINT_INDEX_L_ANKLE:
                 return Pose::JointName::LAnkle;
-            case L_ASIS:
+            case TRC_JOINT_INDEX_L_ASIS:
                 return Pose::JointName::LASIS;
-            case L_BackOffset:
+            case TRC_JOINT_INDEX_L_BACKOFFSET:
                 return Pose::JointName::LBackOffset;
-            case L_Bicep:
+            case TRC_JOINT_INDEX_L_BICEP:
                 return Pose::JointName::LBicep;
-            case L_Elbow:
+            case TRC_JOINT_INDEX_L_ELBOW:
                 return Pose::JointName::LElbow;
-            case L_Foot:
+            case TRC_JOINT_INDEX_L_FOOT:
                 return Pose::JointName::LFoot;
-            case L_Forearm:
+            case TRC_JOINT_INDEX_L_FOREARM:
                 return Pose::JointName::LForearm;
-            case L_Head_Offset:
+            case TRC_JOINT_INDEX_L_HEAD_OFFSET:
                 return Pose::JointName::LHeadOffset;
-            case L_Heel:
+            case TRC_JOINT_INDEX_L_HEEL:
                 return Pose::JointName::LHeel;
-            case L_Knee:
+            case TRC_JOINT_INDEX_L_KNEE:
                 return Pose::JointName::LKnee;
-            case L_Pinky:
+            case TRC_JOINT_INDEX_L_PINKY:
                 return Pose::JointName::LPinky;
-            case L_PSIS:
+            case TRC_JOINT_INDEX_L_PSIS:
                 return Pose::JointName::LPSIS;
-            case L_Radius:
+            case TRC_JOINT_INDEX_L_RADIUS:
                 return Pose::JointName::LRadius;
-            case L_Shank:
+            case TRC_JOINT_INDEX_L_SHANK:
                 return Pose::JointName::LShank;
-            case L_Shoulder:
+            case TRC_JOINT_INDEX_L_SHOULDER:
                 return Pose::JointName::LShoulder;
-            case L_Thigh:
+            case TRC_JOINT_INDEX_L_THIGH:
                 return Pose::JointName::LThigh;
-            case L_Thumb:
+            case TRC_JOINT_INDEX_L_THUMB:
                 return Pose::JointName::LThumb;
-            case L_Toe:
+            case TRC_JOINT_INDEX_L_TOE:
                 return Pose::JointName::LToe;
-            case L_Ulna:
+            case TRC_JOINT_INDEX_L_ULNA:
                 return Pose::JointName::LUlna;
-            case Neck:
+            case TRC_JOINT_INDEX_NECK:
                 return Pose::JointName::Neck;
-            case R_Ankle:
+            case TRC_JOINT_INDEX_R_ANKLE:
                 return Pose::JointName::RAnkle;
-            case R_ASIS:
+            case TRC_JOINT_INDEX_R_ASIS:
                 return Pose::JointName::RASIS;
-            case R_Bicep:
+            case TRC_JOINT_INDEX_R_BICEP:
                 return Pose::JointName::RBicep;
-            case R_Elbow:
+            case TRC_JOINT_INDEX_R_ELBOW:
                 return Pose::JointName::RElbow;
-            case R_Foot:
+            case TRC_JOINT_INDEX_R_FOOT:
                 return Pose::JointName::RFoot;
-            case R_ForeArm:
+            case TRC_JOINT_INDEX_R_FOREARM:
                 return Pose::JointName::RForeArm;
-            case R_Heel:
+            case TRC_JOINT_INDEX_R_HEEL:
                 return Pose::JointName::RHeel;
-            case R_Knee:
+            case TRC_JOINT_INDEX_R_KNEE:
                 return Pose::JointName::RKnee;
-            case R_Pinky:
+            case TRC_JOINT_INDEX_R_PINKY:
                 return Pose::JointName::RPinky;
-            case R_PSIS:
+            case TRC_JOINT_INDEX_R_PSIS:
                 return Pose::JointName::RPSIS;
-            case R_Radius:
+            case TRC_JOINT_INDEX_R_RADIUS:
                 return Pose::JointName::RRadius;
-            case R_Shank:
+            case TRC_JOINT_INDEX_R_SHANK:
                 return Pose::JointName::RShank;
-            case R_Shoulder:
+            case TRC_JOINT_INDEX_R_SHOULDER:
                 return Pose::JointName::RShoulder;
-            case R_Thigh:
+            case TRC_JOINT_INDEX_R_THIGH:
                 return Pose::JointName::RThigh;
-            case R_Thumb:
+            case TRC_JOINT_INDEX_R_THUMB:
                 return Pose::JointName::RThumb;
-            case R_Toe:
+            case TRC_JOINT_INDEX_R_TOE:
                 return Pose::JointName::RToe;
-            case R_Ulna:
+            case TRC_JOINT_INDEX_R_ULNA:
                 return Pose::JointName::RUlna;
-            case Top_head:
+            case TRC_JOINT_INDEX_TOP_HEAD:
                 return Pose::JointName::TopHead;
-            case V_Sacral:
+            case TRC_JOINT_INDEX_V_SACRAL:
                 return Pose::JointName::VSacral;
             default:
                 throw std::invalid_argument("JOINT_INDEX Time and Frame is not supported!!");
