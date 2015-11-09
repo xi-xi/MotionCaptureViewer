@@ -58,7 +58,7 @@ namespace viewer{
         }
     }
     
-    void TrcReader::createPose(const std::list<std::string> &posedata, Motion& motion){
+    void TrcReader::createMotion(const std::list<std::string> &posedata, Motion& motion){
         auto it = posedata.begin();
         Pose pose;
         Time time;
