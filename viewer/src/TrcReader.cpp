@@ -49,7 +49,7 @@ namespace viewer{
         }
         std::list<std::string> tokens;
         boost::split(tokens,line, boost::is_any_of(TrcReader::DATACELL_DELIM), boost::token_compress_off);
-        this->createPose(tokens, motion);
+        this->createMotion(tokens, motion);
     }
     
     void TrcReader::close(){
@@ -65,6 +65,14 @@ namespace viewer{
         time.frame = static_cast<decltype(time.frame)>(std::stoul(*it));
         ++it;
         time.second = std::stod(*it);
+    }
+    
+    void TrcReader::createPose(const std::list<std::string> &posedata, Pose& pose){
+        ;
+    }
+    
+    void TrcReader::createTime(const std::list<std::string> &posedata, Time &time){
+        ;
     }
     
     Pose::JointName TrcReader::index2name(const TRC_JOINT_INDEX& index){

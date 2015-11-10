@@ -7,6 +7,9 @@
 #include <string>
 #include "Pose.hpp"
 namespace viewer{
+    class Time;
+}
+namespace viewer{
     class TrcReader : public MotionReader{
     public:
         TrcReader();
@@ -73,6 +76,8 @@ namespace viewer{
         static Pose::JointName index2name(const TRC_JOINT_INDEX& index);
         std::ifstream input_stream_;
         void createMotion(const std::list<std::string>& posedata, Motion& pose);
+        void createTime(const std::list<std::string>& posedata, Time& time);
+        void createPose(const std::list<std::string>& posedata, Pose& pose);
     };
 }
 #endif
