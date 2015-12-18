@@ -5,7 +5,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/algorithm/string.hpp>
-#include "Motion.hpp"
+#include "MotionFrame.hpp"
 #include "Pose.hpp"
 #include "Time.hpp"
 namespace viewer{
